@@ -8,12 +8,11 @@ const app = express();
 
 //  Load the home page
 app.get("/", function (req, res) {
-  //  Replace with page content
-  res.send("Home Page Loaded");
+  res.send("Home Page Loaded"); //  Replace with page content
 });
 
 //  Setup server to run on the PORT specified below
-const PORT = 3000;
+const PORT = 3000; //Change to desired port
 app.listen(PORT, function () {
   console.log("Server is up and running on " + PORT);
 });
