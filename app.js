@@ -8,7 +8,7 @@ const app = express();
 
 //  Load the home page
 app.get("/", function (req, res) {
-  //Replace with page content
+  //  Replace with page content
   res.send("Home Page Loaded");
 });
 
