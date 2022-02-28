@@ -1,18 +1,19 @@
-//  Require NPM Modules
-//  Install using "npm i express body-parser"
 const express = require("express");
 const bodyParser = require("body-parser");
+const mongoose = require("mongoose");
+const ejs = require("ejs");
 
-//Create new App, running express
 const app = express();
 
-//  Load the home page
-app.get("/", function (req, res) {
-  res.send("Home Page Loaded"); //  Replace with page content
-});
+app.set("view engine", "ejs");
 
-//  Setup server to run on the PORT specified below
-const PORT = 3000; //Change to desired port
-app.listen(PORT, function () {
-  console.log("Server is up and running on " + PORT);
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static("public"));
+
+//  TODO
+
+//  Start Server
+const port = 3000;
+app.listen(port, () => {
+  console.log("Server stared on port " + port + "...");
 });
